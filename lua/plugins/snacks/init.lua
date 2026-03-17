@@ -17,7 +17,9 @@ return{
 		local color = "#c0caf5"
 		local groups = {
 			"SnacksPickerInputBorder",
-			"SnacksPickerInputTitle"
+			"SnacksPickerInputTitle",
+			"SnacksPickerListBorder",
+			"SnacksPickerListTitle",
 		}
 		for _, group in ipairs(groups) do
 			vim.api.nvim_set_hl(0, group, { fg = color })

@@ -71,6 +71,9 @@ return {
 				border = {
 					style = "single",
 				},
+				win_options = {
+					winhighlight = "Normal:Normal,FloatBorder:NoiceCmdlinePopupBorder",
+				},
 			},
 		}
 	},
