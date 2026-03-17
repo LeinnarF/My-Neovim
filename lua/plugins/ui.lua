@@ -1,4 +1,4 @@
-return {
+M = {
 	{
 		"folke/tokyonight.nvim",
 		lazy = false,
@@ -30,3 +30,8 @@ return {
 	},
 }
 
+if not vim.g.vscode then
+	return M
+else
+	return {}
+end

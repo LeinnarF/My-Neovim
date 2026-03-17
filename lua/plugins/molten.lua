@@ -1,4 +1,4 @@
-return {
+M = {
 	{
 		"benlubas/molten-nvim",
 		version = "^1.0.0",
@@ -37,3 +37,9 @@ return {
 		},
 	},
 }
+
+if not vim.g.vscode then
+	return M
+else
+	return {}
+end

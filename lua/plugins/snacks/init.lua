@@ -6,7 +6,7 @@ local keys = {}
 vim.list_extend(keys, lazygit.keys)
 vim.list_extend(keys, picker.keys)
 
-return{
+M = {
 	"folke/snacks.nvim",
 	-- priority = 1000,
 	lazy = false,
@@ -26,3 +26,9 @@ return{
 		end
 	end,
 }
+
+if not vim.g.vscode then
+	return M
+else
+	return {}
+end

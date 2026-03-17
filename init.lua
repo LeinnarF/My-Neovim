@@ -15,8 +15,8 @@ vim.opt.rtp:prepend(lazypath)
 
 require('keymap')
 require('options')
+require("lazy").setup('plugins')
 if not vim.g.vscode then
 	require('filetype')
-	require("lazy").setup('plugins')
 end
 

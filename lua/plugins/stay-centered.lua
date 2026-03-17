@@ -1,5 +1,6 @@
 return {
   'arnamak/stay-centered.nvim',
+	cond = not vim.g.vscode,
   lazy = false,
   opts = {
     -- filetypes to skip centering (use :lua print(vim.bo.filetype) to check)

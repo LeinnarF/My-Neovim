@@ -1,4 +1,4 @@
-return {
+M = {
 	{ "github/copilot.vim" },
   {
     "CopilotC-Nvim/CopilotChat.nvim",
@@ -21,3 +21,9 @@ return {
 		}
   },
 }
+
+if not vim.g.vscode then
+	return M
+else
+	return {}
+end

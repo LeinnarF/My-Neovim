@@ -1,5 +1,6 @@
 return {
 	"CRAG666/code_runner.nvim",
+	cond = not vim.g.vscode,
 	config = function ()
 		require("code_runner").setup({
 			filetype = {
