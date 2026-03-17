@@ -1,5 +1,6 @@
 return {
 	"OXY2DEV/markview.nvim",
+	cond = not vim.g.vscode,
 	lazy = false,
 	dependencies = {
 		"nvim-treesitter/nvim-treesitter",

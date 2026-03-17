@@ -22,6 +22,7 @@ A modern, fast, and feature-rich Neovim configuration built with Lua, focused on
   - [Lualine.nvim](https://github.com/nvim-lualine/lualine.nvim) for a sleek statusline.
   - [Indent-blankline](https://github.com/lukas-reineke/indent-blankline.nvim) for indentation guides.
 - **🤖 AI Integration:** [GitHub Copilot](https://github.com/zbirenbaum/copilot.lua) integration.
+- **💻 VS Code Compatibility:** Optimized to work as a backend for the [VSCode Neovim](https://marketplace.visualstudio.com/items?itemName=asvetliakov.vscode-neovim) extension.
 
 ## 📁 Structure
 
@@ -62,6 +63,20 @@ The leader key is set to `Space`.
 | `<localleader>me` | Evaluate Operator/Selection |
 | `<localleader>ml` | Evaluate Line |
 | `<localleader>mr` | Re-evaluate Cell |
+
+## 💻 VS Code Setup
+
+This configuration is optimized for use with the [VSCode Neovim](https://marketplace.visualstudio.com/items?itemName=asvetliakov.vscode-neovim) extension. 
+
+When running in VS Code:
+- **UI Plugins:** Heavy UI plugins like `Noice`, `Lualine`, and `Neo-tree` are automatically disabled.
+- **Keybindings:** Essential Neovim keybindings (like `jk` to exit Insert Mode, `H/L` for line ends, and move lines with `Alt+j/k`) are preserved, while LSP and window management are deferred to VS Code.
+- **Performance:** Only essential core logic and compatible plugins are loaded for a snappy experience.
+
+To use:
+1. Install the **VSCode Neovim** extension in VS Code.
+2. In VS Code settings, set `neovim.neovimExecutablePaths.linux` (or your OS equivalent) to your Neovim path.
+3. The extension will automatically use your `init.lua` and adapt accordingly.
 
 ## 🛠️ Requirements
 
