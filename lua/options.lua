@@ -43,16 +43,6 @@ if not vim.g.vscode then
 		severity_sort = true,
 		float = {
 			source = true,
-			border = {
-				{ "┌", "FloatBorder" },
-				{ "─", "FloatBorder" },
-				{ "┐", "FloatBorder" },
-				{ "│", "FloatBorder" },
-				{ "┘", "FloatBorder" },
-				{ "─", "FloatBorder" },
-				{ "└", "FloatBorder" },
-				{ "│", "FloatBorder" },
-			},
 		},
 		signs = {},
 		update_in_insert = false,
