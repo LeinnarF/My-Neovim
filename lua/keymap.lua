@@ -37,6 +37,9 @@ map('v', '<A-k>', ":m '<-2<CR>gv=gv", { desc='Move Line Up', silent = true })
 
 if not vim.g.vscode then
 
+	-- Copilot Inline
+	map('i', '<A-l>', '<Plug>(copilot-accept-word)', { desc='Accept Copilot Suggestion', silent = true })
+
   -- File Explorer
   map('n', '<leader>e', ':Neotree toggle<CR>', {desc='Toggle File Explorer', silent = true})
 
