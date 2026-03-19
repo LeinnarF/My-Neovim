@@ -1,13 +1,25 @@
-M = {
-	{ "github/copilot.vim" },
+local M = {
+	{
+		"github/copilot.vim"
+	},
   {
     "CopilotC-Nvim/CopilotChat.nvim",
     dependencies = {
       { "nvim-lua/plenary.nvim", branch = "master" },
 			{ "github/copilot.vim" }
     },
-    build = "make tiktoken",
-    opts = {},
+		build = "make tiktoken",
+		opts = {
+			model = "gpt-5.3-codex",
+			mappings = {
+				reset = {
+					normal = false,
+					insert = false,
+					visual = false,
+					command = false,
+				}
+			},
+		},
 		keys = {
 			{ "<leader>zc", ":CopilotChat<CR>", mode = "n", desc = "Copilot Chat" },
 			{ "<leader>ze", ":CopilotChatExplain<CR>", mode = "v", desc = "Explain Code" },
@@ -16,14 +28,13 @@ M = {
 			{ "<leader>zo", ":CopilotChatOptimize<CR>", mode = "v", desc = "Optimize Code" },
 			{ "<leader>zd", ":CopilotChatDocs<CR>", mode = "v", desc = "Add Documentation" },
 			{ "<leader>zt", ":CopilotChatTests<CR>", mode = "v", desc = "Generate Tests" },
-			{ "<leader>zm", ":CopilotChatCommit<CR>", mode = "n", desc = "Generate Commit Message" },
-			{ "<leader>zs", ":CopilotChatCommit<CR>", mode = "v", desc = "Generate Commit Message" },
+			{ "<leader>zm", ":CopilotChatModels<CR>", mode = "n", desc = "Check Models" },
 		}
   },
 }
 
-if not vim.g.vscode then
-	return M
-else
+if vim.g.vscode then
 	return {}
 end
+
+return M
