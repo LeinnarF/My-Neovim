@@ -21,14 +21,14 @@ local M = {
 			},
 		},
 		keys = {
-			{ "<leader>zc", ":CopilotChat<CR>", mode = "n", desc = "Copilot Chat" },
-			{ "<leader>ze", ":CopilotChatExplain<CR>", mode = "v", desc = "Explain Code" },
-			{ "<leader>zr", ":CopilotChatReview<CR>", mode = "v", desc = "Review Code" },
-			{ "<leader>zf", ":CopilotChatFix<CR>", mode = "v", desc = "Fix Code" },
-			{ "<leader>zo", ":CopilotChatOptimize<CR>", mode = "v", desc = "Optimize Code" },
-			{ "<leader>zd", ":CopilotChatDocs<CR>", mode = "v", desc = "Add Documentation" },
-			{ "<leader>zt", ":CopilotChatTests<CR>", mode = "v", desc = "Generate Tests" },
-			{ "<leader>zm", ":CopilotChatModels<CR>", mode = "n", desc = "Check Models" },
+			{ "<leader>zc", ":CopilotChat<CR>", mode = "n", desc = "Copilot Chat", silent = true },
+			{ "<leader>ze", ":CopilotChatExplain<CR>", mode = "v", desc = "Explain Code", silent = true },
+			{ "<leader>zr", ":CopilotChatReview<CR>", mode = "v", desc = "Review Code", silent = true },
+			{ "<leader>zf", ":CopilotChatFix<CR>", mode = "v", desc = "Fix Code", silent = true },
+			{ "<leader>zo", ":CopilotChatOptimize<CR>", mode = "v", desc = "Optimize Code", silent = true },
+			{ "<leader>zd", ":CopilotChatDocs<CR>", mode = "v", desc = "Add Documentation", silent = true },
+			{ "<leader>zt", ":CopilotChatTests<CR>", mode = "v", desc = "Generate Tests", silent = true },
+			{ "<leader>zm", ":CopilotChatModels<CR>", mode = "n", desc = "Check Models", silent = true },
 		}
   },
 }
