@@ -1,12 +1,13 @@
 M = {
-  'saghen/blink.cmp',
-  dependencies = { 'rafamadriz/friendly-snippets' },
-  version = '1.*',
-  ---@module 'blink.cmp'
-  ---@type blink.cmp.Config
-	
-  opts = {
-    keymap = {
+	'saghen/blink.cmp',
+	dependencies = {
+		'rafamadriz/friendly-snippets',
+	},
+	version = '1.*',
+	---@module 'blink.cmp'
+	---@type blink.cmp.Config
+	opts = {
+		keymap = {
 			preset = 'default',
 			['<CR>'] = { 'accept', 'fallback' },
 			['<C-j>'] = { 'select_next', 'fallback' },
@@ -15,11 +16,11 @@ M = {
 
 		cmdline = { enabled = false },
 
-    appearance = {
-      nerd_font_variant = 'mono'
-    },
+		appearance = {
+			nerd_font_variant = 'mono'
+		},
 
-    completion = {
+		completion = {
 			documentation = {
 				auto_show = true,
 				auto_show_delay_ms = 500,
@@ -42,17 +43,16 @@ M = {
 				lsp      = { score_offset = 0 },
 				snippets = { score_offset = -1 },
 				buffer   = { score_offset = -3 },
-			}
+			},
 		},
 
-    fuzzy = { implementation = "prefer_rust_with_warning" }
+		fuzzy = { implementation = "prefer_rust_with_warning" }
 
-  },
-  opts_extend = { "sources.default" }
+	},
+	opts_extend = { "sources.default" }
 }
 
-if not vim.g.vscode then
-	return M
-else
+if vim.g.vscode then
 	return {}
 end
+return M

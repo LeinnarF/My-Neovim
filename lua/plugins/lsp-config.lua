@@ -46,7 +46,11 @@ M = {
         settings = {
           Lua = {
             diagnostics = { globals = { "vim" } },
-            workspace = { library = vim.api.nvim_get_runtime_file("", true) },
+            workspace = {
+							library = vim.api.nvim_get_runtime_file("", true),
+							maxPreload = 0,
+							checkThirdParty = false,
+						},
           },
         },
       })
