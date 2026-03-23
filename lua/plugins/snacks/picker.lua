@@ -47,7 +47,7 @@ M.opts = {
 
 M.keys = {
   { "<leader>ff", function() Snacks.picker.files() end,                   desc = "Find files" },
-  { "<C-f>",      function() Snacks.picker.files({ ignored = true }) end, desc = "Find all files" },
+  { "<C-f>",      function() Snacks.picker.files({ cwd = vim.env.HOME }) end,                   desc = "Find all files" },
   { "<leader>fg", function() Snacks.picker.grep() end,                    desc = "Live grep" },
   { "<leader>fb", function() Snacks.picker.buffers() end,                 desc = "Find buffers" },
   { "<leader>fc", function() Snacks.picker.commands() end,                desc = "Commands" },
