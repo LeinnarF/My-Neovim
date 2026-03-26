@@ -45,7 +45,7 @@ return {
 		},
 		modes = {
 			char = {
-				enabled = true,
+				enabled = false,
 				jump_labels = true,
 			},
 		},
