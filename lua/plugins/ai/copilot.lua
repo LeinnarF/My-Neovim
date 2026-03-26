@@ -1,5 +1,33 @@
 local M = {
-	"github/copilot.vim",
+  "zbirenbaum/copilot.lua",
+  cmd = "Copilot",
+  event = "InsertEnter",
+  config = function()
+    require("copilot").setup({
+      suggestion = {
+        enabled = true,
+        auto_trigger = true,
+				keymap = {
+          accept = "<Tab>",
+          accept_word = "<A-l>",
+          accept_line = false,
+          next = "<M-]>",
+          prev = "<M-[>",
+          dismiss = "<C-]>",
+        },
+      },
+			server = {
+				type = "binary",
+			},
+      panel = { enabled = false },
+      filetypes = {
+				lua = true,
+				python = true,
+				tex = true,
+        ["*"] = false,
+      },
+    })
+  end,
 }
 
 if vim.g.vscode then
