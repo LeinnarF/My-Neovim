@@ -19,4 +19,5 @@ require("lazy").setup('plugins')
 if not vim.g.vscode then
 	require('filetype')
 end
+require('highlights')
 
