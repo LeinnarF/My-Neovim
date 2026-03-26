@@ -60,9 +60,4 @@ if not vim.g.vscode then
 			},
 		}
 	})
-
-	-- Highlight groups
-	local color = "#c0caf5"
-	vim.api.nvim_set_hl(0, "SnacksPickerInputBorder", { fg = color })
-
 end
