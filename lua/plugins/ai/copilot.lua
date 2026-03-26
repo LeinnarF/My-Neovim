@@ -6,26 +6,19 @@ local M = {
     require("copilot").setup({
       suggestion = {
         enabled = true,
-        auto_trigger = true,
-				keymap = {
-          accept = "<Tab>",
-          accept_word = "<A-l>",
-          accept_line = false,
-          next = "<M-]>",
-          prev = "<M-[>",
-          dismiss = "<C-]>",
-        },
+				--     auto_trigger = true,
+				-- keymap = {
+				--       accept = "<Tab>",
+				--       accept_word = "<A-l>",
+				--       accept_line = false,
+				--       next = "<M-]>",
+				--       prev = "<M-[>",
+				--       dismiss = "<C-]>",
+        -- },
       },
-			server = {
-				type = "binary",
-			},
+			server = { type = "binary" },
       panel = { enabled = false },
-      filetypes = {
-				lua = true,
-				python = true,
-				tex = true,
-        ["*"] = false,
-      },
+      filetypes = { ["*"] = true },
     })
   end,
 }
