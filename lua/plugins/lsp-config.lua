@@ -18,7 +18,7 @@ M = {
     config = function()
       local servers = {
 				"lua_ls",
-				"pyright",
+				"basedpyright",
 				"html",
 				"cssls",
 				"ts_ls",
