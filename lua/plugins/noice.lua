@@ -32,16 +32,16 @@ return {
 			view = nil,
 		},
 		views = {
-			-- hover = {
-			-- 	border = "single",
-			-- 	relative = "cursor",
-			-- 	position = {
-			-- 		row = 2,
-			-- 	},
-			-- 	win_options = {
-			-- 		winhighlight = "Normal:Normal,FloatBorder:NoiceHoverBorder",
-			-- 	},
-			-- },
+			hover = {
+				border = "single",
+				relative = "cursor",
+				position = {
+					row = 2,
+				},
+				win_options = {
+					winhighlight = "Normal:Normal,FloatBorder:NoiceHoverBorder",
+				},
+			},
 			cmdline_popup = {
 				position = {
 					row = "35%",
@@ -88,7 +88,6 @@ return {
 			"NoicePopupBorder",
 			"NoiceSplitBorder",
 			"NoiceCmdlineText",
-			"NoiceHoverBorder",
 		}
 		vim.api.nvim_create_autocmd("ColorScheme", {
 			callback = function()
