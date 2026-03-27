@@ -34,6 +34,7 @@ return {
 		views = {
 			hover = {
 				border = "single",
+				scrollbar = false,
 				relative = "cursor",
 				position = {
 					row = 2,
