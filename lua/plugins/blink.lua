@@ -12,6 +12,7 @@ M = {
 			preset = 'default',
 			['<CR>'] = { 'accept', 'fallback' },
 			['<C-j>'] = { 'select_next', 'fallback' },
+			['<Tab>'] = { 'select_next', 'fallback' },
 			['<C-k>'] = { 'select_prev', 'fallback' },
 		},
 		cmdline = { enabled = false },
