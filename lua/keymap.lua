@@ -70,7 +70,7 @@ if not vim.g.vscode then
   map('n', 'gd', vim.lsp.buf.definition, { desc='Go to Definition', silent = true })
   map('n', 'gi', vim.lsp.buf.implementation, { desc='Go to Implementation', silent = true })
   map('n', 'gr', vim.lsp.buf.references, { desc='List References', silent = true })
-  map('n', '<leader>ca', vim.lsp.buf.code_action, { desc='Code Action', silent = true })
+  map({'n', 'v'}, '<leader>ca', vim.lsp.buf.code_action, { desc='Code Action', silent = true })
   map('n', '<leader>rn', vim.lsp.buf.rename, { desc='Rename', silent = true })
 
   -- Terminal Keymaps
