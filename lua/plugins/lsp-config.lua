@@ -64,6 +64,7 @@ M = {
 							RepeatedWords = true,
 							LongSentences = false,
 							SpelledNumbers = false,
+							Spaces = false,
 						},
 						userDictPath = vim.fn.stdpath("config") .. "/spell/harper.txt",
 						diagnosticSeverity = "hint",
