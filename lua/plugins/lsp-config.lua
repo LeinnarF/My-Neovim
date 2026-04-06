@@ -27,7 +27,8 @@ M = {
 				"bashls",
 				"jsonls",
 				"yamlls",
-				"harper_ls"
+				"harper_ls",
+				"markdown_oxide"
 			}
 
 			require("mason-lspconfig").setup({
@@ -84,6 +85,16 @@ M = {
 						},
 					},
 				},
+			})
+
+			vim.lsp.config("markdown_oxide", {
+				capabilities = require("blink.cmp").get_lsp_capabilities({
+					workspace = {
+						didChangeWatchedFiles = {
+							dynamicRegistration = true,
+						},
+					},
+				}),
 			})
 
 			vim.lsp.enable(servers)
