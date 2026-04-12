@@ -8,6 +8,7 @@ return {
 	},
 	config = function()
 		require("markview").setup({
+			injections = {enable = false},
 			preview = {
 				enable = true,
 				icon_provider = "devicons",

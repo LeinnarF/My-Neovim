@@ -1,9 +1,12 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
+	branch = "main",
 	build = ":TSUpdate",
-	config = function ()
-		local config = require("nvim-treesitter.configs")
-		config.setup({
+	init = function()
+		vim.opt.runtimepath:append(vim.fn.stdpath("data") .. "/site")
+	end,
+	config = function()
+		require("nvim-treesitter").setup({
 			ensure_installed = {
 				"lua",
 				"c",
@@ -11,11 +14,8 @@ return {
 				"python",
 			},
 			auto_install = true,
-			ignore_install = {},
-			modules = {},
-			sync_install = false,
-			highlight = {enable = true, disable = {"latex"}},
-			indent = {enable = true},
+			highlight = { enable = true, disable = { "latex" } },
+			indent = { enable = true },
 		})
-	end
+	end,
 }
