@@ -17,13 +17,13 @@ M.opts = {
           {
             win = "input",
             height = 1,
-            border = "single",
+            border = "rounded",
             title = " {source} {live} ",
             title_pos = "center",
           },
           {
             win = "list",
-						border = "single",
+						border = "rounded",
           },
         },
         -- {

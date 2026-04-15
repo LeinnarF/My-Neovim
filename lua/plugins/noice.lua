@@ -33,7 +33,7 @@ return {
 		},
 		views = {
 			hover = {
-				border = "single",
+				border = "rounded",
 				scrollbar = false,
 				relative = "cursor",
 				position = {
@@ -53,7 +53,7 @@ return {
 					height = "auto",
 				},
 				border = {
-					style = "single",
+					style = "rounded",
 					padding = { 0, 1 },
 				},
 				win_options = {
@@ -71,7 +71,7 @@ return {
 					height = 10,
 				},
 				border = {
-					style = "single",
+					style = "rounded",
 				},
 				win_options = {
 					winhighlight = "Normal:Normal,FloatBorder:NoiceCmdlinePopupBorder",
