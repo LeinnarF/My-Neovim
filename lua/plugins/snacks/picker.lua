@@ -36,7 +36,7 @@ M.opts = {
       },
     },
     sources = {
-      files = { hidden = true, ignored = true },
+      -- files = { hidden = true, ignored = true },
       grep  = { hidden = true, ignored = true },
     },
     icons = {
@@ -46,9 +46,11 @@ M.opts = {
 }
 
 M.keys = {
-  { "<leader>ff", function() Snacks.picker.files({
-		hidden = true, igored = true,
-	}) end,                   desc = "Find files" },
+  { "<leader>fF", function() Snacks.picker.files({
+		hidden = true, ignored = true,
+	}) end,                   desc = "Find files (hidden)" },
+
+	{ "<leader>ff", function() Snacks.picker.files() end,                   desc = "Find Files" },
   { "<C-f>",      function() Snacks.picker.files({ cwd = vim.env.HOME }) end,                   desc = "Find all files" },
   { "<leader>fg", function() Snacks.picker.grep() end,                    desc = "Live grep" },
   { "<leader>fb", function() Snacks.picker.buffers() end,                 desc = "Find buffers" },
