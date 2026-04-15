@@ -21,19 +21,6 @@ M = {
 	lazy = false,
 	opts = opts,
 	keys = keys,
-	config = function (_, o)
-		require("snacks").setup(o)
-		local color = "#c0caf5"
-		local groups = {
-			"SnacksPickerInputBorder",
-			"SnacksPickerInputTitle",
-			"SnacksPickerListBorder",
-			"SnacksPickerListTitle",
-		}
-		for _, group in ipairs(groups) do
-			vim.api.nvim_set_hl(0, group, { fg = color })
-		end
-	end,
 }
 
 if vim.g.vscode then
